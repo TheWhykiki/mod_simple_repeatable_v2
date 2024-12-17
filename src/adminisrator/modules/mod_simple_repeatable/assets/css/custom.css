@@ -1,0 +1,28 @@
+.quicklinksContainer ul{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+.quicklinksContainer ul li a{
+  display: flex;
+}
+.quicklinksContainer .repeatableButton{
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.quicklinksContainer a:before{
+  display: none !important;
+}
+.quicklinksContainer h3{
+  font-size: 16px;
+}
+.com_content [aria-controls="attrib-fields-0"]{
+  display:none !important;
+}
+.customFields{
+  margin-top: 60px;
+}
