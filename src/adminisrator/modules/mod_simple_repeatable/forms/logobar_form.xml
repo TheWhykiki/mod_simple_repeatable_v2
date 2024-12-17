@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><form>    <field name="titel" type="text" label="Link Titel" />    <field name="logo" type="media" label="Bild auswählen"  directory="images" />    <field name="link" type="text" label="Link" /></form>

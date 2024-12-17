@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><form>    <field name="titel" type="text" label="Titel" filter="RAW" />    <field name="link" type="text" label="Link"  filter="RAW"/>    <field name="linktitle" type="text" label="Link Titel"  filter="RAW"/>    <field name="image" type="media" label="Bild auswählen"  directory="images" /></form>

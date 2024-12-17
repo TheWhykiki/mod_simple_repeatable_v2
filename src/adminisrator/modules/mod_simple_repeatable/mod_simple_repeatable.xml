@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>VMM Simple Repeatable Modul v2</name>
+    <author>>Whykiki</author>
+    <creationDate>Dezember 2024</creationDate>
+    <copyright>Copyright (C) 2005 - 2020 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <version>3.0.0</version>
+    <description>Simple Repeatable und Quicklinks Modul für das Joomla Backend</description>
+    <description>MOD_QUICKICON_XML_DESCRIPTION</description>
+    <namespace path="src">Joomla\Module\SimpleRepeatable</namespace>
+
+    <files>
+        <folder module="mod_simple_repeatable">services</folder>
+        <folder>tmpl</folder>
+        <folder>src</folder>
+        <folder>assets</folder>
+        <folder>forms</folder>
+        <folder>services</folder>
+    </files>
+
+    <config>
+
+        <fields name="params">
+
+            <fieldset name="Einstellungen" label="Einstellungen">
+
+                <field name="module_headline"
+                       label="Modulheadline"
+                       size="30"
+                       type="text"
+                />
+
+                <field name="fileloading" type="list" default="" required="true" label="Bitte auswählen" description="">
+                    <option value="0">Quicklinks</option>
+                </field>
+            </fieldset>
+
+
+            <fieldset name="Quicklinks" label="Quicklinks" showon="fileloading:0">
+
+                <field name="quicklinks" type="subform" formsource="/administrator/modules/mod_simple_repeatable/forms/quicklinks_form.xml"
+                       multiple="true"
+                       label="Menu verwalten"
+                       description="Inhalte zum Duplizieren" />
+
+            </fieldset>
+
+
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        class="form-select"
+                        validate="moduleLayout"
+                />
+
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        rows="3"
+                        validate="CssIdentifier"
+                />
+
+                <field
+                        name="cache"
+                        type="list"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        default="0"
+                        filter="integer"
+                        validate="options"
+                >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+
+                <field
+                        name="cache_time"
+                        type="number"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        default="900"
+                        filter="integer"
+                        min="1"
+                        validate="number"
+                />
+            </fieldset>
+        </fields>
+
+    </config>
+
+</extension>

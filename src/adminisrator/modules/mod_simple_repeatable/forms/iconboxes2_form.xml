@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><form>    <field name="titel" type="text" label="Titel" filter="RAW" />    <field name="image" type="filelist" label="Icon auswählen"  directory="images/icons"  />    <field name="text" type="textarea" label="Text" filter="RAW" /></form>
